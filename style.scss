@@ -1,0 +1,225 @@
+:root {
+  --main-orange: #f18e1b;
+  --main-yellow: #f8b614;
+  --main-blue: #20425b;
+}
+/*Import*/
+//font-awesome
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+body {
+  background-color: #e7e7e7;
+}
+.main-header{
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  .main-nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-header {
+    height: 70px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 15px 0px;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo img {
+      height: auto;
+      width: 130px;
+      vertical-align: bottom;
+    }
+    .btn-menu {
+      width: 40px;
+      height: 40px;
+      background-color: var(--main-blue);
+      z-index: 2;
+      cursor: pointer;
+      &::before{
+        content: '\f0c9';
+        font-family:'Font Awesome 6 free'; 
+        font-weight: 900;
+        color: white;
+      }
+    }
+    .main-nav {
+      display: none;
+      .link {
+        padding: 15px;
+        background-color: #fafafa;
+        border-bottom: #f4f5f6 solid 1px;
+        cursor: pointer;
+        a {
+          color: #424242;
+          font-weight: 700;
+        }
+      }
+      .link:hover,
+      .link.open {
+        background-color: var(--main-orange);
+        border-bottom: var(--main-orange) solid 1px;
+        a {
+          color: white;
+        }
+      }
+      .link.dropdown {
+        position: relative;
+        /*--後方十字--*/
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: var(--main-orange);
+          right: 15px;
+          top: 15px;
+          transition: all 0.3s linear;
+        }
+        &.open::before,
+        &.open::after,
+        &:hover::before,
+        &:hover::after {
+          background-color: white;
+        }
+        //Font size 16px
+        &::before {
+          width: 10px;
+          height: 2px;
+          margin-top: 7px;
+        }
+        &::after {
+          width: 2px;
+          height: 10px;
+          margin-top: 3px;
+          margin-right: 4px;
+        }
+        /*--後方十字--*/
+        /*--下拉選單--*/
+        ul {
+          display: none;
+        }
+        &.open {
+          &::after {
+            transform: rotate(90deg);
+            transition: all 0.3s linear;
+          }
+          ul {
+            background-color: white;
+            margin: 15px -15px -16px -15px;
+            display: block;
+            padding: 15px;
+            li {
+              padding: 10px 0px;
+              border-bottom: #f4f5f6 solid 1px;
+            }
+            a {
+              color: #424242;
+            }
+          }
+        }
+        /*--下拉選單--*/
+      }
+    }
+
+    &.active {
+      &::before {
+        content: "";
+        background-color: rgba(31, 32, 34, 0.85);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+    &.active .main-nav {
+      display: block;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      height: 100%;
+      padding-top: 70px;
+      width: 200px;
+      background-color: white;
+    }
+    &.active .btn-menu {
+      &::before{
+        content: '\f00d';
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-header {
+    padding:20px 0px;
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .btn-menu {
+      display: none;
+    }
+    .main-nav{
+      display: flex;
+      width: 100%;
+      .links{
+        display: flex;
+        width: 100%;
+      }
+      .link{
+        position: relative;
+        width: 25%;
+        &:hover::after{
+          content: '';
+          position: absolute;
+          width:  20%;
+          height: 5px;
+          bottom: 0;
+          left: 40%;
+          background-color: var(--main-blue);
+        }
+      }
+      a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #424242;
+        font-weight: 700;
+        height: 60px;
+        line-height: 60px;
+      }
+      .link.dropdown {
+        ul{
+          display: none;
+        }
+        &:hover{
+          ul{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #e7e7e7;
+            border-radius: 5px;
+            li:hover{
+              background-color: var(--main-blue);
+              a{
+                color: white;
+              }
+            }
+            li + li {
+              border-top: 1px #e7e7e7 solid;
+            }
+          }
+        }
+      }
+    }
+  }
+}
