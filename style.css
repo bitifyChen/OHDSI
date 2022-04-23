@@ -1,37 +1,67 @@
 @charset "UTF-8";
+/* Import */
+/* Import - Reset.css */
+@import url("reset.css");
+/* Import - font-awesome */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+/* CSS Start */
+/* Font */
+html {
+  font-size: 10px;
+  font-family: "Roboto", "Noto Sans TC", sans-serif;
+}
+
+html h1 {
+  font-size: 2.6rem;
+}
+
+html h2 {
+  font-size: 2.4rem;
+}
+
+html h3 {
+  font-size: 2rem;
+}
+
+html p,
+html a,
+html span,
+html li {
+  font-size: 1.4rem;
+}
+
+/* Root */
 :root {
   --main-orange: #f18e1b;
   --main-yellow: #f8b614;
   --main-blue: #20425b;
 }
 
-/*Import*/
 body {
   background-color: #e7e7e7;
 }
 
+/* Navbar */
 .main-header {
   background-color: white;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.main-header .main-nav {
-  display: none;
+.main-header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
+/* Navbar--mobile */
 @media screen and (max-width: 768px) {
   .main-header {
     height: 70px;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     padding: 15px 0px;
+    /*--開起選單--*/
   }
   .main-header .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -52,12 +82,13 @@ body {
     cursor: pointer;
   }
   .main-header .btn-menu::before {
-    content: '\f0c9';
-    font-family: 'Font Awesome 6 free';
+    content: "\f0c9";
+    font-family: "Font Awesome 6 free";
     font-weight: 900;
     color: white;
   }
   .main-header .main-nav {
+    /*--預設顯單不顯示--*/
     display: none;
   }
   .main-header .main-nav .link {
@@ -82,9 +113,7 @@ body {
   .main-header .main-nav .link.dropdown {
     position: relative;
     /*--後方十字--*/
-    /*--後方十字--*/
-    /*--下拉選單--*/
-    /*--下拉選單--*/
+    /*--第二層下拉選單--*/
   }
   .main-header .main-nav .link.dropdown::before, .main-header .main-nav .link.dropdown::after {
     content: "";
@@ -131,6 +160,11 @@ body {
   .main-header .main-nav .link.dropdown.open ul a {
     color: #424242;
   }
+  .main-header.active {
+    /*--黑色遮照--*/
+    /*--選單顯示--*/
+    /*--按鈕圖示變更-*/
+  }
   .main-header.active::before {
     content: "";
     background-color: rgba(31, 32, 34, 0.85);
@@ -152,18 +186,17 @@ body {
     background-color: white;
   }
   .main-header.active .btn-menu::before {
-    content: '\f00d';
+    content: "\f00d";
   }
 }
 
+/* Navbar--PC */
 @media screen and (min-width: 768px) {
   .main-header {
-    padding: 20px 0px;
+    padding: 30px 0px 20px 0px;
+    border-top: 30px solid var(--main-orange);
   }
   .main-header .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -175,6 +208,12 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .main-header .logo img {
+    height: auto;
+    width: 80%;
+    margin: auto;
+    display: block;
+  }
   .main-header .btn-menu {
     display: none;
   }
@@ -183,6 +222,7 @@ body {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
+    /*--第二層下拉選單--*/
   }
   .main-header .main-nav .links {
     display: -webkit-box;
@@ -195,7 +235,7 @@ body {
     width: 25%;
   }
   .main-header .main-nav .link:hover::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 20%;
     height: 5px;
@@ -217,6 +257,7 @@ body {
     font-weight: 700;
     height: 60px;
     line-height: 60px;
+    font-size: 2rem;
   }
   .main-header .main-nav .link.dropdown ul {
     display: none;
