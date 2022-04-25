@@ -1,3 +1,10 @@
+/* Root */
+:root {
+  --main-orange: #f18e1b;
+  --main-yellow: #f8b614;
+  --main-blue: #20425b;
+}
+
 /* Import */
 /* Import - Reset.css */
 @import url("reset.css");
@@ -26,13 +33,21 @@ html {
   }
 }
 
-/* Root */
-:root {
-  --main-orange: #f18e1b;
-  --main-yellow: #f8b614;
-  --main-blue: #20425b;
+/* Extand */
+/*--轉場速度*/
+%sbs {
+  transition: all .3s linear;
 }
-
+/*--Button*/
+%btn-yellow {
+  background-color: var(--main-yellow);
+  color: white;
+  cursor: pointer;
+  &:hover{
+    background-color: var(--main-orange);
+  }
+}
+/* Start */
 body {
   background-color: #e7e7e7;
 }
@@ -258,4 +273,42 @@ body {
       }
     }
   }
+}
+
+/* Footer--mobile */
+.main-footer {
+  background-color: var(--main-blue);
+  padding: 30px 0px;
+  .footer-btns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .btn {
+      margin: 2px 2px;
+      padding: 0 20px;
+      border-radius: 5px;
+      min-width: 100px;
+      line-height: 40px;
+      @extend %sbs;
+      @extend %btn-yellow;
+    }
+  }
+  .footer-infos {
+    padding: 10px 0px;
+    .info {
+      padding: 5px 0px;
+      font-size: 13px;
+      font-weight: 300;
+      color: #aeaeae;
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+  }
+}
+/* Footer--PC */
+@media screen and (min-width: 768px) {
+}
+
+.section-index {
+  height: 400px;
 }
