@@ -353,7 +353,7 @@ body {
 
 .section-base .container {
   background-color: white;
-  min-height: calc( 100vh - 350px);
+  min-height: calc(100vh - 350px);
   padding: 15px;
 }
 
@@ -375,7 +375,8 @@ body {
     background-color: #fafafa;
     color: #474747;
   }
-  .side-block li.active, .side-block li:hover {
+  .side-block li.active,
+  .side-block li:hover {
     background-color: var(--main-orange);
     color: white;
   }
@@ -432,7 +433,7 @@ body {
     font-size: 20px;
   }
   .section-base .title-block .main-title {
-    width: calc( 75% - 60px);
+    width: calc(75% - 60px);
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -453,7 +454,7 @@ body {
             align-items: center;
   }
   .section-base .title-block .main-title h2::after {
-    content: '';
+    content: "";
     position: absolute;
     height: 1px;
     width: 100%;
@@ -468,7 +469,8 @@ body {
     background-color: #f4f5f6;
     padding: 10px;
   }
-  .section-base .side-block li.active, .section-base .side-block li:hover {
+  .section-base .side-block li.active,
+  .section-base .side-block li:hover {
     background-color: white;
     color: var(--main-orange);
   }
@@ -488,7 +490,7 @@ body {
 /* Base End*/
 @media screen and (min-width: 768px) {
   .section-base {
-    min-height: calc( 100vh - 400px);
+    min-height: calc(100vh - 400px);
   }
 }
 
@@ -773,5 +775,131 @@ body {
 
 /* About-Info End*/
 /* About-Research*/
+.section-research .top-message {
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.section-research .research-filter {
+  margin-bottom: 50px;
+}
+
+.section-research .research-filter ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.section-research .research-filter li {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 34px;
+  line-height: 34px;
+  cursor: pointer;
+  border-bottom: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  color: #111;
+  background-color: #fafafa;
+}
+
+.section-research .research-filter li.active {
+  background-color: #20425b;
+  color: white;
+}
+
+.section-research .research-result ul {
+  padding: 10px 0px 10px 25px;
+  position: relative;
+}
+
+.section-research .research-result ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5px;
+  bottom: 0;
+  width: 1px;
+  background-color: #ddd;
+}
+
+.section-research .research {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-research .research::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -22px;
+  width: 5px;
+  height: 5px;
+  display: block;
+  background-color: #2f59ce;
+}
+
+.section-research .research .title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.section-research .research .sub-title {
+  ont-size: 14px;
+  color: #222;
+}
+
+@media screen and (min-width: 768px) {
+  .section-research .top-message {
+    margin: 20px 0px;
+  }
+  .section-research .research-filter li {
+    width: 50%;
+    height: 48px;
+    line-height: 48px;
+    position: relative;
+  }
+  .section-research .research-filter li:hover {
+    background-color: var(--main-blue);
+    color: white;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+  }
+  .section-research .research-filter li.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    margin-left: -8px;
+    border-top: 7px solid var(--main-blue);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+  }
+  .section-research .research::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -24px;
+    display: block;
+    width: 9px;
+    height: 9px;
+    background-color: #FF9000;
+  }
+}
+
 /* About-Research End*/
 /*# sourceMappingURL=style.css.map */
