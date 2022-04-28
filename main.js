@@ -7,6 +7,8 @@ const navDropLinks = document.querySelectorAll(".main-nav .link.dropdown");
 btnMenu.addEventListener("click", menuOpen);
 function menuOpen() {
   menu.classList.toggle("active");
+  //--關閉滑動
+  document.querySelector("body").classList.toggle("lock-scroll");
 }
 //--下拉式選單
 navDropLinks.forEach((link) => {

@@ -51,6 +51,9 @@ html {
 /* Start */
 body {
   background-color: #f4f5f6;
+  &.lock-scroll {
+    overflow: hidden;
+  }
 }
 
 /* Navbar */
@@ -62,10 +65,13 @@ body {
   }
 }
 /* Navbar--mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .main-header {
     height: 70px;
     padding: 15px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     .container {
       justify-content: space-between;
       align-items: center;
@@ -175,6 +181,7 @@ body {
         bottom: 0;
         left: 0;
         right: 0;
+        height: 100vh;
       }
       /*--選單顯示--*/
       .main-nav {
