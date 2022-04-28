@@ -28,7 +28,8 @@ html {
   p,
   a,
   span,
-  li {
+  li,
+  table {
     font-size: 1.4rem;
   }
 }
@@ -630,3 +631,48 @@ body {
     }
   }
 }
+/* Index End*/
+/* About-Info */
+.section-info{
+
+  .info{
+    .info-title h3{
+      font-size: 18px;
+      line-height: 24px;
+      vertical-align: middle;
+      position: relative;
+      width: 100%;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    .info-title h3::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 4px;
+      background: linear-gradient(to right,#20425b 20%,#e3e6e8 20%,#e3e6e8 100%)
+    }
+    .info-content{
+      margin-bottom: 20px;
+      table{
+        border-top:1px solid #20425b ;
+        td{
+          padding:10px 5px;
+        }
+        td.bold{
+          font-weight: 900;
+        }
+        tr{
+          border-bottom: 2px solid #f4f5f6;
+        }
+      }
+    }
+  }  
+}
+/* About-Info End*/
+
+/* About-Research*/
+
+/* About-Research End*/
