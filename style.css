@@ -851,7 +851,7 @@ body.lock-scroll {
 }
 
 .section-research .research::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -15px;
   left: -22px;
@@ -885,8 +885,8 @@ body.lock-scroll {
   .section-research .research-filter li:hover {
     background-color: var(--main-blue);
     color: white;
-    -webkit-transition: all .3s linear;
-    transition: all .3s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
   }
   .section-research .research-filter li.active::after {
     content: "";
@@ -899,16 +899,199 @@ body.lock-scroll {
     border-right: 7px solid transparent;
   }
   .section-research .research::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0px;
     left: -24px;
     display: block;
     width: 9px;
     height: 9px;
-    background-color: #FF9000;
+    background-color: #ff9000;
   }
 }
 
 /* About-Research End*/
+/* News*/
+.section-news .news-search {
+  padding: 20px;
+  border: 1.5px solid var(--main-blue);
+}
+
+.section-news .news-search input {
+  width: 100%;
+  margin-bottom: 5px;
+  vertical-align: middle;
+  padding: 0px;
+  border: 1px solid #ddd;
+  border-radius: 0px;
+  color: #414141;
+  line-height: 40px;
+  text-indent: 10px;
+}
+
+.section-news .news-search button {
+  background-color: var(--main-blue);
+  color: white;
+  width: 100%;
+  padding: 10px;
+}
+
+.section-news .news-list {
+  margin: 30px 0px;
+  border-top: 1px solid var(--main-blue);
+}
+
+.section-news .news-list .news-header {
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 7px 0px;
+  border-bottom: 1px solid #eee;
+}
+
+.section-news .news-list .news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.section-news .news-list .news-title {
+  width: 70%;
+}
+
+.section-news .news-list .news-filter {
+  width: 15%;
+  text-align: center;
+}
+
+.section-news .news-list .news-time {
+  width: 15%;
+  text-align: center;
+}
+
+.section-news .news-list .news p {
+  padding: 10px 0px;
+}
+
+.section-news .news-list .news-title p {
+  width: calc(100% - 20px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.section-news .news-list .news .news-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-news .news-list .news-title span {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.section-news .news-list .news-title span::after {
+  content: "\f56d";
+  font-family: "Font Awesome 6 free";
+  font-weight: 900;
+  color: white;
+  position: absolute;
+  font-size: 20px;
+  color: var(--main-blue);
+}
+
+.section-news .news-list .news-header .news-title {
+  text-align: center;
+}
+
+.section-news .news-list .news-header p {
+  padding: 5px 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .section-news .news-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .section-news .news-search input {
+    width: 70%;
+    height: 40px;
+  }
+  .section-news .news-search button {
+    width: 30%;
+    height: 40px;
+    border: 1px solid var(--main-blue);
+    cursor: pointer;
+  }
+  .section-news .news-search button:hover {
+    background-color: var(--main-orange);
+    border-color: var(--main-orange);
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+  }
+  .section-news .news-list .news p {
+    padding: 20px 0px;
+  }
+  .section-news .news-list .news:hover {
+    background-color: var(--main-orange);
+  }
+  .section-news .news-list .news .news-title {
+    padding-left: 1rem;
+  }
+}
+
+/* News End*/
+/*Pagination*/
+.pagination ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.pagination li {
+  width: 6%;
+}
+
+.pagination li a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: "Calibri";
+  font-weight: 900;
+  padding: 10px 1em;
+  border: 1px solid #ddd;
+}
+
+.pagination li a:hover, .pagination li a.active {
+  background-color: #414141;
+  color: white;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+@media (max-width: 900px) {
+  .pagination li:not(.mobile-show) {
+    display: none;
+  }
+  .pagination li.mobile-show {
+    width: 25%;
+  }
+}
+
+/*Pagination End*/
 /*# sourceMappingURL=style.css.map */
