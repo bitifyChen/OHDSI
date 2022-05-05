@@ -1187,27 +1187,27 @@ body {
 
 @media screen and (min-width: 768px) {
   .section-review {
-    .conatiner{
+    .container {
       width: 70%;
       min-width: 650px;
       margin: auto;
     }
     .news {
       position: relative;
-      box-shadow:none;
-      min-height: calc( 1024px * 0.5 / 450 * 300 );
+      box-shadow: none;
+      min-height: calc(1024px * 0.5 / 450 * 300);
       margin-bottom: 40px;
-      &::after{
-        content: '';
+      &::after {
+        content: "";
         position: absolute;
         width: 100%;
         height: 1px;
-        top: calc( 100% + 20px);
+        top: calc(100% + 20px);
         background-color: #ddd;
         display: block;
       }
       .news-img {
-       width: 50%;
+        width: 50%;
       }
       .news-info {
         position: relative;
@@ -1216,8 +1216,8 @@ body {
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         width: 55%;
         margin-left: 45%;
-        margin-top: calc( -50% / 450 * 300 + 30px );
-        .news-depiction{
+        margin-top: calc(-50% / 450 * 300 + 30px);
+        .news-depiction {
           line-height: 1.5em;
         }
       }
@@ -1227,19 +1227,19 @@ body {
 
 @media screen and (min-width: 1024px) {
   .section-review {
-    .container{
+    .container {
       max-width: 1200px;
     }
     .news {
-      min-height: calc( 1200px * 0.45 / 450 * 300 );
+      min-height: calc(1200px * 0.45 / 450 * 300);
       .news-img {
         width: 45%;
-       }
-       .news-info {
+      }
+      .news-info {
         width: 60%;
         margin-left: 40%;
-        margin-top: calc( -45% / 450 * 300 + 30px );
-        .news-depiction{
+        margin-top: calc(-45% / 450 * 300 + 30px);
+        .news-depiction {
           line-height: 1.5em;
         }
       }
@@ -1247,6 +1247,147 @@ body {
   }
 }
 /* Review End*/
+
+/* Review-detail*/
+@media screen and (max-width: 767px) {
+  .section-review-detail {
+    .side-block {
+      display: none;
+    }
+    .title-block {
+      display: block;
+      .main-title {
+        display: flex;
+        flex-direction: column;
+        h2 {
+          margin-top: 10px;
+        }
+      }
+    }
+    .parent-title {
+      display: none;
+    }
+  }
+}
+
+.section-review-detail {
+  .news-info {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px #ddd solid;
+  }
+
+  .news-info .news-time {
+    padding: 10px;
+    background-color: #f4f5f6;
+    font-weight: 900;
+    color: var(--main-blue);
+    span {
+      font-weight: 500;
+      color: black;
+    }
+  }
+  .news-content {
+    padding: 20px 0px;
+  }
+  .news-gallery {
+    .title {
+      color: var(--main-orange);
+      font-weight: 900;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+  }
+
+  .news-navigation {
+    border-top: 1px #ddd solid;
+    li {
+      display: flex;
+      align-items: center;
+      padding: 10px 0px;
+      border-bottom: 1px #ddd solid;
+    }
+    li span {
+      color: #5e738b;
+      font-weight: 900;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 0 10px;
+    }
+    li span::before {
+      content: "\f106";
+      font-family: "Font Awesome 6 free";
+      font-weight: 900;
+      width: 30px;
+      height: 30px;
+      background-color: #5e738b;
+      border-radius: 99px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      margin-right: auto;
+    }
+    li.next span:before {
+      content: "\f107";
+    }
+    a {
+      width: calc(100% - 100px);
+      flex: 1 1 auto;
+      color: var(--main-blue);
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .figures {
+    display: flex;
+    flex-wrap: wrap;
+    figure {
+      width: 49.75%;
+      padding-bottom: 49.75%;
+      margin: 0.125%;
+      position: relative;
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }  
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-review-detail {
+    .title-block {
+      .main-title img {
+        display: none;
+      }
+    }
+    .figures {
+      figure {
+        width: 23%;
+        margin: 1%;
+        padding-bottom: 25%;
+      }    
+    }
+  }
+}
+
+/* Review-detail End*/
+
+
+/* Photoswipe */
+.pswp__bg{
+  background-color: rgba(0, 0, 0, 0.8)
+}
 
 /*Pagination*/
 .pagination {
