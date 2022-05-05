@@ -835,62 +835,6 @@ body {
 /* About-Research End*/
 
 /* News*/
-.section-links {
-  .links-list {
-    margin: 30px 0px;
-    border-top: 1px solid var(--main-blue);
-    .link-header {
-      background-color: #fafafa;
-      display: flex;
-      padding: 7px 0px;
-      border-bottom: 1px solid #eee;
-    }
-    .link {
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-    }
-    .link-title {
-      width: 80%;
-    }
-    .link-filter {
-      width: 20%;
-      text-align: center;
-    }
-    .link p {
-      padding: 10px 0px;
-    }
-
-    .link-title p {
-      width: calc(100% - 20px);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .link .link-title {
-      display: flex;
-      align-items: center;
-    }
-    .link-header p {
-      padding: 5px 0px;
-    }
-  }
-}
-@media screen and (min-width: 768px) {
-  .section-links {
-    .links-list {
-      .link p {
-        padding: 20px 0px;
-      }
-      .link:hover {
-        background-color: var(--main-orange);
-      }
-    }
-  }
-}
-/* News End*/
-
-/* s*/
 .section-news {
   .news-list {
     margin: 30px 0px;
@@ -965,6 +909,62 @@ body {
       }
       .news .news-title {
         padding-left: 1rem;
+      }
+    }
+  }
+}
+/* News End*/
+
+/* Links*/
+.section-links {
+  .links-list {
+    margin: 30px 0px;
+    border-top: 1px solid var(--main-blue);
+    .link-header {
+      background-color: #fafafa;
+      display: flex;
+      padding: 7px 0px;
+      border-bottom: 1px solid #eee;
+    }
+    .link {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+    .link-title {
+      width: 80%;
+    }
+    .link-filter {
+      width: 20%;
+      text-align: center;
+    }
+    .link p {
+      padding: 10px 0px;
+    }
+
+    .link-title p {
+      width: calc(100% - 20px);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .link .link-title {
+      display: flex;
+      align-items: center;
+    }
+    .link-header p {
+      padding: 5px 0px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-links {
+    .links-list {
+      .link p {
+        padding: 20px 0px;
+      }
+      .link:hover {
+        background-color: var(--main-orange);
       }
     }
   }
