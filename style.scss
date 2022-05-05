@@ -985,20 +985,20 @@ body {
     padding: 20px 0px;
   }
   .news-file {
-    .title{
+    .title {
       color: var(--main-orange);
       font-weight: 900;
     }
-    .file{
+    .file {
       display: flex;
       align-items: center;
       padding: 10px 20px;
       border-top: 1px #ddd solid;
       border-bottom: 1px #ddd solid;
       margin: 10px 0px 20px 0px;
-      color:var(--main-blue);
+      color: var(--main-blue);
     }
-    .file::before{
+    .file::before {
       content: "\f56d";
       font-family: "Font Awesome 6 free";
       font-weight: 900;
@@ -1008,20 +1008,20 @@ body {
       margin-right: 10px;
       color: var(--main-blue);
     }
-    .file:hover{
+    .file:hover {
       text-decoration: underline;
     }
   }
 
   .news-navigation {
     border-top: 1px #ddd solid;
-    li{
+    li {
       display: flex;
       align-items: center;
       padding: 10px 0px;
       border-bottom: 1px #ddd solid;
     }
-    li span{
+    li span {
       color: #5e738b;
       font-weight: 900;
       width: 100px;
@@ -1030,13 +1030,13 @@ body {
       justify-content: space-evenly;
       padding: 0 10px;
     }
-    li span::before{
+    li span::before {
       content: "\f106";
       font-family: "Font Awesome 6 free";
       font-weight: 900;
       width: 30px;
       height: 30px;
-      background-color:#5e738b ;
+      background-color: #5e738b;
       border-radius: 99px;
       display: flex;
       justify-content: center;
@@ -1044,15 +1044,15 @@ body {
       color: white;
       margin-right: auto;
     }
-    li.next span:before{
+    li.next span:before {
       content: "\f107";
     }
-    a{
-      width: calc( 100% - 100px);
+    a {
+      width: calc(100% - 100px);
       flex: 1 1 auto;
       color: var(--main-blue);
     }
-    a:hover{
+    a:hover {
       text-decoration: underline;
     }
   }
@@ -1074,13 +1074,13 @@ body {
   }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .section-news-detail {
     .news-content {
       padding: 20px 20px;
     }
   }
-}	
+}
 /* New Detail End*/
 
 /* Links*/
@@ -1138,6 +1138,114 @@ body {
   }
 }
 /* Links End*/
+
+/* Review */
+.section-review {
+  padding: 15px 0px;
+  .news {
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    .news-img img {
+      width: 100%;
+      height: auto;
+    }
+    .news-info {
+      padding: 20px;
+      .news-title {
+        font-size: 28px;
+        line-height: 1.2em;
+        margin-bottom: 10px;
+        color: var(--main-blue);
+        &:hover {
+          color: var(--main-orange);
+        }
+      }
+      .news-time {
+        color: #414141;
+        margin-bottom: 20px;
+      }
+      .news-depiction {
+        color: #414141;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        line-height: 1.2em;
+      }
+      .read-more {
+        background-color: var(--main-yellow);
+        padding: 5px 10px;
+        color: white;
+        margin-top: 10px;
+        cursor: pointer;
+        &:hover {
+          background-color: var(--main-orange);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-review {
+    .conatiner{
+      width: 70%;
+      min-width: 650px;
+      margin: auto;
+    }
+    .news {
+      position: relative;
+      box-shadow:none;
+      min-height: calc( 1024px * 0.5 / 450 * 300 );
+      margin-bottom: 40px;
+      &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        top: calc( 100% + 20px);
+        background-color: #ddd;
+        display: block;
+      }
+      .news-img {
+       width: 50%;
+      }
+      .news-info {
+        position: relative;
+        z-index: 1;
+        background-color: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        width: 55%;
+        margin-left: 45%;
+        margin-top: calc( -50% / 450 * 300 + 30px );
+        .news-depiction{
+          line-height: 1.5em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section-review {
+    .container{
+      max-width: 1200px;
+    }
+    .news {
+      min-height: calc( 1200px * 0.45 / 450 * 300 );
+      .news-img {
+        width: 45%;
+       }
+       .news-info {
+        width: 60%;
+        margin-left: 40%;
+        margin-top: calc( -45% / 450 * 300 + 30px );
+        .news-depiction{
+          line-height: 1.5em;
+        }
+      }
+    }
+  }
+}
+/* Review End*/
 
 /*Pagination*/
 .pagination {
