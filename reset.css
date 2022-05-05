@@ -73,7 +73,7 @@ a{
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 1280PX;
+    max-width: 1280px;
   }
   
   @media screen and (min-width: 768px) {

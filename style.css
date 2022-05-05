@@ -304,6 +304,7 @@ body.lock-scroll {
     background-color: white;
     border: 1px solid #e7e7e7;
     border-radius: 5px;
+    z-index: 5;
   }
   .main-header .main-nav .link.dropdown:hover ul li:hover {
     background-color: var(--main-blue);
