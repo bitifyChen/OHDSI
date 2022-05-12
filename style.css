@@ -639,6 +639,7 @@ body.lock-scroll {
 
 .section-index-guides .guide .content.event img {
   width: 100%;
+  aspect-ratio: 1/1;
 }
 
 .section-index-guides .guide .content.news {
@@ -784,17 +785,20 @@ body.lock-scroll {
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
     margin-bottom: 0px;
+    aspect-ratio: 1;
+    overflow: hidden;
   }
   .section-index-guides .guide .content.event img {
     width: 100%;
   }
   .section-index-guides .guide .content.news ul {
+    padding: 10px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
   .section-index-guides .guide .content.news ul li {
-    padding-left: 60px;
+    padding-left: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -805,15 +809,26 @@ body.lock-scroll {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 40px;
+    height: 30px;
+  }
+  .section-index-guides .guide .content.news ul li a {
+    height: 18px;
+    line-height: 18px;
+  }
+  .section-index-guides .guide .content.news ul li span {
+    height: 12px;
+    line-height: 12px;
   }
   .section-index-guides .guide .content.news ul li::before {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     font-size: 18px;
   }
+  .section-index-guides .guide .content.links ul {
+    padding: 10px;
+  }
   .section-index-guides .guide .content.links ul li {
-    height: 20%;
+    height: 16%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -823,7 +838,7 @@ body.lock-scroll {
     margin: 0;
   }
   .section-index-guides .guide .content.links ul li a {
-    font-size: 20px;
+    font-size: 18px;
   }
   .section-index-guides .guide .content.links ul li a:hover {
     background-color: var(--main-orange);
@@ -831,11 +846,44 @@ body.lock-scroll {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 990px) {
+  .section-index-guides .guide .content.news ul li {
+    padding-left: 50px;
+    height: 60px;
+  }
+  .section-index-guides .guide .content.news ul li a {
+    height: 20px;
+    line-height: 20px;
+  }
+  .section-index-guides .guide .content.news ul li span {
+    height: 16px;
+    line-height: 16px;
+  }
   .section-index-guides .guide .content.news ul li::before {
-    width: 50px;
-    height: 50px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section-index-guides .guide .content.news ul li {
+    padding-left: 70px;
+    height: 90px;
+  }
+  .section-index-guides .guide .content.news ul li a {
+    height: 30px;
+    line-height: 30px;
     font-size: 20px;
+  }
+  .section-index-guides .guide .content.news ul li span {
+    height: 20px;
+    line-height: 20px;
+  }
+  .section-index-guides .guide .content.news ul li::before {
+    top: 15px;
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -1034,6 +1082,17 @@ body.lock-scroll {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.section-news .news-list .news.top ::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  background-color: var(--main-yellow);
+  left: 0;
+  top: 0;
 }
 
 .section-news .news-list .news-title {

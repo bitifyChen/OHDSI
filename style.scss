@@ -553,6 +553,7 @@ body {
       &.event {
         img {
           width: 100%;
+          aspect-ratio: 1/1;
         }
       }
       &.news {
@@ -661,6 +662,8 @@ body {
       .content {
         flex: 1 1 auto;
         margin-bottom: 0px;
+        aspect-ratio: 1;
+        overflow: hidden;
         &.event {
           img {
             width: 100%;
@@ -668,30 +671,40 @@ body {
         }
         &.news {
           ul {
+            padding: 10px;
             justify-content: space-between;
             li {
-              padding-left: 60px;
+              padding-left: 40px;
               display: flex;
               flex-direction: column;
               justify-content: center;
-              height: 40px;
+              height: 30px;
+              a {
+                height: 18px;
+                line-height: 18px;
+              }
+              span {
+                height: 12px;
+                line-height: 12px;
+              }
             }
             li::before {
-              width: 40px;
-              height: 40px;
+              width: 30px;
+              height: 30px;
               font-size: 18px;
             }
           }
         }
         &.links {
           ul {
+            padding: 10px;
             li {
-              height: 20%;
+              height: 16%;
               display: flex;
               align-items: center;
               margin: 0;
               a {
-                font-size: 20px;
+                font-size: 18px;
               }
               a:hover {
                 background-color: var(--main-orange);
@@ -705,16 +718,59 @@ body {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 990px) {
   .section-index-guides {
     .guide {
       .content {
         &.news {
           ul {
+            li {
+              padding-left: 50px;
+              height: 60px;
+              a {
+                height: 20px;
+                line-height: 20px;
+              }
+              span {
+                height: 16px;
+                line-height: 16px;
+              }
+            }
             li::before {
-              width: 50px;
-              height: 50px;
-              font-size: 20px;
+              top: 10px;
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section-index-guides {
+    .guide {
+      .content {
+        &.news {
+          ul {
+            li {
+              padding-left: 70px;
+              height: 90px;
+              a {
+                height: 30px;
+                line-height: 30px;
+                font-size: 20px;
+              }
+              span {
+                height: 20px;
+                line-height: 20px;
+              }
+            }
+            li::before {
+              top: 15px;
+              width: 60px;
+              height: 60px;
             }
           }
         }
@@ -889,6 +945,16 @@ body {
       display: flex;
       align-items: center;
       border-bottom: 1px solid #eee;
+      position: relative;
+    }
+    .news.top ::before {
+      content: "";
+      width: 4px;
+      height: 100%;
+      position: absolute;
+      background-color: var(--main-yellow);
+      left: 0;
+      top: 0;
     }
     .news-title {
       width: 70%;
@@ -1360,7 +1426,7 @@ body {
         height: 100%;
         object-fit: cover;
       }
-    }  
+    }
   }
 }
 
@@ -1376,17 +1442,16 @@ body {
         width: 23%;
         margin: 1%;
         padding-bottom: 25%;
-      }    
+      }
     }
   }
 }
 
 /* Review-detail End*/
 
-
 /* Photoswipe */
-.pswp__bg{
-  background-color: rgba(0, 0, 0, 0.8)
+.pswp__bg {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /*Pagination*/
