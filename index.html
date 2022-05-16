@@ -7,10 +7,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OHDSI TAIWAN</title>
     <link rel="stylesheet" href="style.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 </head>
+<style>
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide a {
+        width: 100%;
+    }
+
+    .swiper-pagination {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 10px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 14px;
+        height: 14px;
+        border-radius: 0;
+        opacity: 1;
+        transition: 0.3s all linear;
+        border: 1px var(--main-orange) solid;
+        background-color: transparent;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: var(--main-orange);
+        opacity: 1;
+        transition: 0.3s all linear;
+    }
+
+    .swiper_btn {
+        color: white;
+        border-radius: 0px;
+        opacity: .5;
+        transition: width .5s linear, opacity .5s linear;
+    }
+
+    .swiper_btn.swiper-button-prev::before {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 4px;
+        left: 4px;
+        background-color: white;
+        top: calc(50% - 2px);
+        transition: width .5s linear;
+    }
+
+    .swiper_btn.swiper-button-next::before {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 4px;
+        right: 4px;
+        background-color: white;
+        top: calc(50% - 2px);
+        transition: width .5s .5s linear;
+    }
+
+    .swiper_btn:hover {
+        opacity: 1;
+        --swiper-navigation-size: 70px;
+        transition: width .5s linear;
+
+    }
+
+    .swiper_btn:hover::before {
+        width: 200%;
+        transition: width .5s .5s linear;
+    }
+
+    .swiper-button-disabled {
+        opacity: 0 !important;
+    }
+</style>
 
 <body>
-   <header class="main-header">
+    <header class="main-header">
         <div class="container">
             <a class="logo" href="index.html">
                 <h1 class="sr-only">OHDSI TAIWAN</h1>
@@ -50,25 +136,30 @@
     <main>
         <section class="section-index-banner">
             <div class="container">
-                <img src="img/index/banner.jpg" class="index-banner" alt="">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <img src="img/index/banner.jpg" class="index-banner swiper-slide" alt="">
+                        <img src="img/index/banner.jpg" class="index-banner swiper-slide" alt="">
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </section>
         <section class="section-index-word">
             <div class="container">
                 <div class="info ckeditor">
-                    <h4 style="margin-bottom: 25px;line-height: 24px;text-align: left;font-size: 24px;color: #20425a;">
-                        Welcome to OHDSI KOREA!</h4>
-                    <p style="color:#444444;">
-                        OHDSI (Observational Health Data Sciences and Informatics)는 2008년 의료 데이터 기반 연구 지원을 위해 설립된 글로벌
+                    <p><span style="font-size:22px"><span style="color:#27ae60"><strong>Welcome</strong></span></span>
+                    </p>
+
+                    <p>OHDSI (Observational Health Data Sciences and Informatics)는 2008년 의료 데이터 기반 연구 지원을 위해 설립된 글로벌
                         컨소시엄으로, OMOP-CDM (Observational Medical Outcomes Partnership-Common Data Model)을 기반으로 공동연구를 지원하고
-                        있습니다.
-
-                        <br><br>한국은 2014년 아주대학교 의료정보학과가 컨소시엄에 참여한 것을 시작으로, 현재 10개의 병원 EMR이 OMOP-CDM으로 변환되었습니다 (OHDSI
-                        홈페이지의 Data Network 기준).
-                        2016년, 국제 OHDSI committee에서 최초로 OHDSI Korea 포럼을 개설하였으며, 현재 OHDSI Korea 리더십 미팅이 13차까지 개최되었습니다
-                        (2019년 7월 기준).
-
-                        <br><br>OHDSI Korea는 OHDSI 리더들과 국내 참여기관들의 협력을 통해 새로운 의료연구 패러다임을 이끌어나가는데 주도적인 역할을 할 것입니다.
+                        있습니다.<br>
+                        <br>
+                        한국은 2014년 아주대학교 의료정보학과가 컨소시엄에 참여한 것을 시작으로, 현재 10개의 병원 EMR이 OMOP-CDM으로 변환되었습니다 (OHDSI 홈페이지의 Data
+                        Network 기준). 2016년, 국제 OHDSI committee에서 최초로 OHDSI Korea 포럼을 개설하였으며, 현재 OHDSI Korea 리더십 미팅이
+                        13차까지 개최되었습니다 (2019년 7월 기준).<br>
+                        <br>
+                        OHDSI Korea는 OHDSI 리더들과 국내 참여기관들의 협력을 통해 새로운 의료연구 패러다임을 이끌어나가는데 주도적인 역할을 할 것입니다.
                     </p>
                 </div>
             </div>
@@ -149,12 +240,12 @@
                                     <a href="#">
                                         FEEDER-NET Platform
                                     </a>
-                                </li>     
+                                </li>
                                 <li>
                                     <a href="#">
                                         FEEDER-NET Platform
                                     </a>
-                                </li>          
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -179,6 +270,27 @@
         </div>
     </footer>
     <script src="main.js"></script>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            speed: 500,
+            autoplay: {
+                delay: 5000, // 10秒切換一次
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 
 </html>

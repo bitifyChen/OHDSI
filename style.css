@@ -438,10 +438,12 @@ body.lock-scroll {
 
 .ckeditor * {
   line-height: 1.6em;
+  font-size: inherit;
 }
 
 .ckeditor p {
   width: 100%;
+  font-size: 16px;
 }
 
 .ckeditor img {
