@@ -918,6 +918,7 @@ body.lock-scroll {
 
 .section-info .info .info-content table {
   border-top: 1px solid #20425b;
+  width: 100%;
 }
 
 .section-info .info .info-content table td {
@@ -980,9 +981,18 @@ body.lock-scroll {
   color: white;
 }
 
+.section-research .research-result {
+  overflow-x: hidden;
+}
+
 .section-research .research-result ul {
   padding: 10px 0px 10px 25px;
   position: relative;
+  display: none;
+}
+
+.section-research .research-result ul.show {
+  display: block;
 }
 
 .section-research .research-result ul::before {

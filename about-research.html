@@ -69,15 +69,81 @@
                     <div class="researchs">
                         <div class="research-filter">
                             <ul>
-                                <li class="active">Taiwan</li>
-                                <li>Global</li>
+                                <li data-filter="taiwan" class="active">Taiwan</li>
+                                <li data-filter="global" >Global</li>
                             </ul>
                         </div>
                         <div class="research-result">
-                            <ul>
+                            <ul class="show" data-filter="taiwan">
                                 <li class="research">
                                     <p class="title">
                                         A Framework (SOCRATex) for Hierarchical Annotation of Unstructured Electronic Health Records and Integration Into a Standardized Medical Database: Development and Usability Study
+                                    </p>
+                                    <span class="sub-title">
+                                        Park, Jimyung; You, Seng Chan; Jeong, Eugene; Weng, Chunhua; Park, Dongsu; Roh, Jin; Lee, Dong Yun; Cheong, Jae Youn; Choi, Jin Wook; Kang, Mira;JMIR Medical Informatics. 2021 9(3): e23983
+                                    </span>
+                                </li>
+                                <li class="research">
+                                    <p class="title">
+                                        A Framework (SOCRATex) for Hierarchical Annotation of Unstructured Electronic Health Records and Integration Into a Standardized Medical Database: Development and Usability Study
+                                    </p>
+                                    <span class="sub-title">
+                                        Park, Jimyung; You, Seng Chan; Jeong, Eugene; Weng, Chunhua; Park, Dongsu; Roh, Jin; Lee, Dong Yun; Cheong, Jae Youn; Choi, Jin Wook; Kang, Mira;JMIR Medical Informatics. 2021 9(3): e23983
+                                    </span>
+                                </li>
+                                <li class="research">
+                                    <p class="title">
+                                        A Framework (SOCRATex) for Hierarchical Annotation of Unstructured Electronic Health Records and Integration Into a Standardized Medical Database: Development and Usability Study
+                                    </p>
+                                    <span class="sub-title">
+                                        Park, Jimyung; You, Seng Chan; Jeong, Eugene; Weng, Chunhua; Park, Dongsu; Roh, Jin; Lee, Dong Yun; Cheong, Jae Youn; Choi, Jin Wook; Kang, Mira;JMIR Medical Informatics. 2021 9(3): e23983
+                                    </span>
+                                </li>
+                                <li class="research">
+                                    <p class="title">
+                                        A Framework (SOCRATex) for Hierarchical Annotation of Unstructured Electronic Health Records and Integration Into a Standardized Medical Database: Development and Usability Study
+                                    </p>
+                                    <span class="sub-title">
+                                        Park, Jimyung; You, Seng Chan; Jeong, Eugene; Weng, Chunhua; Park, Dongsu; Roh, Jin; Lee, Dong Yun; Cheong, Jae Youn; Choi, Jin Wook; Kang, Mira;JMIR Medical Informatics. 2021 9(3): e23983
+                                    </span>
+                                </li>
+                                <li class="research">
+                                    <p class="title">
+                                        A Framework (SOCRATex) for Hierarchical Annotation of Unstructured Electronic Health Records and Integration Into a Standardized Medical Database: Development and Usability Study
+                                    </p>
+                                    <span class="sub-title">
+                                        Park, Jimyung; You, Seng Chan; Jeong, Eugene; Weng, Chunhua; Park, Dongsu; Roh, Jin; Lee, Dong Yun; Cheong, Jae Youn; Choi, Jin Wook; Kang, Mira;JMIR Medical Informatics. 2021 9(3): e23983
+                                    </span>
+                                </li>
+                                <li class="research">
+                                    <p class="title">
+                                        A Framework (SOCRATex) for Hierarchical Annotation of Unstructured Electronic Health Records and Integration Into a Standardized Medical Database: Development and Usability Study
+                                    </p>
+                                    <span class="sub-title">
+                                        Park, Jimyung; You, Seng Chan; Jeong, Eugene; Weng, Chunhua; Park, Dongsu; Roh, Jin; Lee, Dong Yun; Cheong, Jae Youn; Choi, Jin Wook; Kang, Mira;JMIR Medical Informatics. 2021 9(3): e23983
+                                    </span>
+                                </li>
+                                <li class="research">
+                                    <p class="title">
+                                        A Framework (SOCRATex) for Hierarchical Annotation of Unstructured Electronic Health Records and Integration Into a Standardized Medical Database: Development and Usability Study
+                                    </p>
+                                    <span class="sub-title">
+                                        Park, Jimyung; You, Seng Chan; Jeong, Eugene; Weng, Chunhua; Park, Dongsu; Roh, Jin; Lee, Dong Yun; Cheong, Jae Youn; Choi, Jin Wook; Kang, Mira;JMIR Medical Informatics. 2021 9(3): e23983
+                                    </span>
+                                </li>
+                                <li class="research">
+                                    <p class="title">
+                                        A Framework (SOCRATex) for Hierarchical Annotation of Unstructured Electronic Health Records and Integration Into a Standardized Medical Database: Development and Usability Study
+                                    </p>
+                                    <span class="sub-title">
+                                        Park, Jimyung; You, Seng Chan; Jeong, Eugene; Weng, Chunhua; Park, Dongsu; Roh, Jin; Lee, Dong Yun; Cheong, Jae Youn; Choi, Jin Wook; Kang, Mira;JMIR Medical Informatics. 2021 9(3): e23983
+                                    </span>
+                                </li>
+                            </ul>
+                            <ul data-filter="global">
+                                <li class="research">
+                                    <p class="title">
+                                        全球
                                     </p>
                                     <span class="sub-title">
                                         Park, Jimyung; You, Seng Chan; Jeong, Eugene; Weng, Chunhua; Park, Dongsu; Roh, Jin; Lee, Dong Yun; Cheong, Jae Youn; Choi, Jin Wook; Kang, Mira;JMIR Medical Informatics. 2021 9(3): e23983
@@ -164,6 +230,34 @@
         </div>
     </footer>
     <script src="main.js"></script>
+    <script>
+        const researchBtn = document.querySelectorAll('.research-filter li')
+        const researchResult = document.querySelectorAll('.research-result ul')
+        
+        //點擊分類按鈕
+        researchBtn.forEach((btn)=>{
+            btn.addEventListener('click',()=>{
+                //清除所有按鈕active
+                researchBtn.forEach((btn)=>{btn.classList.remove('active')})
+                //添加此按鈕active
+                btn.classList.add('active')
+                //顯示結果
+                researchShow(btn.dataset.filter);
+            })
+        })
+
+        //顯示結果
+        function researchShow(filter){
+            researchResult.forEach((result)=>{
+               if( result.dataset.filter == filter){
+                    result.classList.add('show')
+               }else{
+                   result.classList.remove('show')
+               }
+            })
+        }
+
+    </script>
 </body>
 
 </html>
