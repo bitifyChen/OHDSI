@@ -61,8 +61,10 @@ body {
   background-color: #f4f5f6;
 }
 
-body.lock-scroll {
-  overflow: hidden;
+@media screen and (max-width: 767px) {
+  .lock-scroll {
+    overflow: hidden;
+  }
 }
 
 /* Navbar */
@@ -86,7 +88,7 @@ body.lock-scroll {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 999;
     /*--開起選單--*/
   }
   .main-header .container {
@@ -447,7 +449,9 @@ body.lock-scroll {
 }
 
 .ckeditor img {
-  width: 100%;
+  width: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-width: 100%;
   height: auto;
 }

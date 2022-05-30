@@ -51,11 +51,12 @@ html {
 /* Start */
 body {
   background-color: #f4f5f6;
+}
+@media screen and (max-width: 767px) {
   &.lock-scroll {
     overflow: hidden;
   }
 }
-
 /* Navbar */
 .main-header {
   background-color: white;
@@ -71,7 +72,7 @@ body {
     padding: 15px 0px;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 999;
     .container {
       justify-content: space-between;
       align-items: center;
@@ -390,7 +391,8 @@ body {
     font-size: 16px;
   }
   img {
-    width: 100%;
+    width: 100% !important;
+    object-fit: cover;
     max-width: 100%;
     height: auto;
   }
