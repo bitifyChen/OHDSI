@@ -785,6 +785,14 @@ body {
 /* Index End*/
 /* About-Info */
 .section-info {
+  .top-message {
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
   .info {
     .info-title h3 {
       font-size: 18px;
@@ -807,7 +815,6 @@ body {
     .info-content {
       margin-bottom: 20px;
       table {
-        border-top: 1px solid #20425b;
         width: 100%;
         td {
           padding: 10px 5px;

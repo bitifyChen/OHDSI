@@ -895,6 +895,15 @@ body {
 
 /* Index End*/
 /* About-Info */
+.section-info .top-message {
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
 .section-info .info .info-title h3 {
   font-size: 18px;
   line-height: 24px;
@@ -921,7 +930,6 @@ body {
 }
 
 .section-info .info .info-content table {
-  border-top: 1px solid #20425b;
   width: 100%;
 }
 
