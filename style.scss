@@ -391,10 +391,9 @@ body {
     font-size: 16px;
   }
   img {
-    width: 100% !important;
     object-fit: cover;
     max-width: 100%;
-    height: auto;
+    height: auto !important;
   }
   iframe {
     max-width: 100%;
